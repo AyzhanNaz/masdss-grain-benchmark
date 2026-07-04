@@ -1,0 +1,9 @@
+# Centralized MILP baseline solver settings (identical on every instance).
+solver_name: TODO          # e.g. Gurobi / CPLEX / CBC
+solver_version: TODO
+relative_mip_gap: TODO     # [X]% in the paper
+time_limit_seconds: 3600
+threads: TODO
+warm_start: false
+incumbent_policy: best_incumbent_at_limit
+logs: results/expected/milp_logs/   # one log per instance

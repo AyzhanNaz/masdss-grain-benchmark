@@ -1,0 +1,41 @@
+# Instance-generator distributions and exact parameter values (paper Table 5).
+# Fill [TODO] fields with the exact values used in the reported runs.
+
+market_sizes: [50, 100, 200, 400, 800, 1600]   # participants per clearing horizon
+instances_per_size: 30
+representative_size: 400
+
+producers:
+  supply_volume:
+    distribution: lognormal
+    mu: TODO        # log-scale mean
+    sigma: TODO     # log-scale std
+  locations:
+    method: sample_around_oblast_centres   # real oblast centres, geography.yaml
+    dispersion_km: TODO                    # reflects each oblast's extent
+
+buyers:
+  demand:
+    distribution: two_component_mixture    # milling / feed
+    milling_share: 0.56
+    feed_share: 0.44
+    milling: {distribution: TODO, params: TODO}
+    feed:    {distribution: TODO, params: TODO}
+
+carriers:
+  fleet_size_range: [20, 300]
+  vehicle_capacity_t: [60, 70]     # hopper-wagon class
+
+warehouses:
+  count_range: [10, 60]            # licensed-elevator network
+  holding_cost_usd_per_t_week: [0.6, 1.1]
+
+distances:
+  method: gravity_kernel_on_real_geography
+  mean_producer_buyer_km: 320
+  std_km: 180
+
+valuations:
+  noise_type: multiplicative
+  sigma_default: TODO
+  sigma_sweep: [0.05, 0.25]

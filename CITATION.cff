@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: "If you use this benchmark or code, please cite the paper below."
+title: "MAS-DSS Grain Marketplace Benchmark"
+authors:
+  - family-names: Aldabergenova
+    given-names: Kamar
+  - family-names: Kantureyeva
+    given-names: Mansiya
+  - family-names: Serimbetov
+    given-names: Bulat
+  - family-names: Zhasuzakova
+    given-names: Meiramkul
+  - family-names: Ospanova
+    given-names: Tleugaisha
+  - family-names: Nazyrova
+    given-names: Aizhan
+preferred-citation:
+  type: article
+  title: "A Multi-Agent Methodology and Decision-Support Toolset for Grain Marketplace Platforms: Coordinating Trade, Transport, and Warehouse Logistics in Agri-Food Economic Systems"
+  authors:
+    - family-names: Aldabergenova
+      given-names: Kamar
+    - family-names: Kantureyeva
+      given-names: Mansiya
+    - family-names: Serimbetov
+      given-names: Bulat
+    - family-names: Zhasuzakova
+      given-names: Meiramkul
+    - family-names: Ospanova
+      given-names: Tleugaisha
+    - family-names: Nazyrova
+      given-names: Aizhan

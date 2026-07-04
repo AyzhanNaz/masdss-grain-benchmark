@@ -1,0 +1,11 @@
+# Real nodes (paper Table 6). Producer locations are sampled around oblast centres;
+# buyer and gateway nodes use these exact coordinates.
+oblast_centres:
+  - {name: Akmola,           lat: TODO, lon: TODO}
+  - {name: Kostanay,         lat: TODO, lon: TODO}
+  - {name: North_Kazakhstan, lat: TODO, lon: TODO}
+hubs_and_gateways:
+  - {name: Astana,    role: central_rail_hub,        lat: 51.13, lon: 71.43}
+  - {name: Aktau,     role: export_port_gateway,     lat: 43.65, lon: 51.16}
+  - {name: Saryagash, role: rail_gateway_uzbekistan, lat: 41.46, lon: 69.17}
+  - {name: Dostyk,    role: rail_gateway_china,      lat: 45.26, lon: 82.49}

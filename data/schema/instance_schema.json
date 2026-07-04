@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Grain marketplace benchmark instance",
+  "type": "object",
+  "required": ["meta", "producers", "buyers", "carriers", "warehouses", "nodes"],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": ["market_size", "replicate", "seed", "generator_version"],
+      "properties": {
+        "market_size": {"type": "integer"},
+        "replicate": {"type": "integer"},
+        "seed": {"type": "integer"},
+        "generator_version": {"type": "string"}
+      }
+    },
+    "producers": {"type": "array", "items": {
+      "type": "object",
+      "required": ["id", "node", "volume_t", "grade", "ask_price", "arrival"],
+      "properties": {
+        "id": {"type": "string"}, "node": {"type": "string"},
+        "volume_t": {"type": "number"},
+        "grade": {"enum": ["milling", "feed"]},
+        "ask_price": {"type": "number"}, "arrival": {"type": "number"}
+      }}},
+    "buyers": {"type": "array", "items": {
+      "type": "object",
+      "required": ["id", "node", "demand_t", "grade", "bid_price", "arrival"],
+      "properties": {
+        "id": {"type": "string"}, "node": {"type": "string"},
+        "demand_t": {"type": "number"},
+        "grade": {"enum": ["milling", "feed"]},
+        "bid_price": {"type": "number"}, "arrival": {"type": "number"}
+      }}},
+    "carriers": {"type": "array", "items": {
+      "type": "object",
+      "required": ["id", "home_node", "capacity_t", "cost_per_km"],
+      "properties": {
+        "id": {"type": "string"}, "home_node": {"type": "string"},
+        "capacity_t": {"type": "number"}, "cost_per_km": {"type": "number"}
+      }}},
+    "warehouses": {"type": "array", "items": {
+      "type": "object",
+      "required": ["id", "node", "capacity_t", "holding_cost_usd_t_week"],
+      "properties": {
+        "id": {"type": "string"}, "node": {"type": "string"},
+        "capacity_t": {"type": "number"},
+        "holding_cost_usd_t_week": {"type": "number"}
+      }}},
+    "nodes": {"type": "array", "items": {
+      "type": "object",
+      "required": ["id", "lat", "lon", "role"],
+      "properties": {
+        "id": {"type": "string"}, "lat": {"type": "number"},
+        "lon": {"type": "number"}, "role": {"type": "string"}
+      }}}
+  }
+}

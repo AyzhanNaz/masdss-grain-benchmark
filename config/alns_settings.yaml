@@ -1,0 +1,10 @@
+# ALNS configuration used for the routing/storage re-optimization loop.
+destroy_operators: [TODO]        # e.g. random_removal, worst_removal, related_removal
+repair_operators:  [TODO]        # e.g. greedy_insertion, regret2_insertion
+adaptive_weights:
+  reaction_factor: TODO
+  segment_length: TODO
+acceptance: {type: TODO, params: TODO}   # e.g. simulated_annealing, start_temp, cooling
+warm_start: reuse_previous_round_solution
+stopping: {max_iterations: TODO, max_seconds: TODO, no_improve_limit: TODO}
+random_seed_policy: instance_seed        # from config/seeds.txt

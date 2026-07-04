@@ -1,0 +1,8 @@
+numpy>=1.26
+scipy>=1.11        # t-test, Wilcoxon (Table 9)
+pandas>=2.1
+matplotlib>=3.8    # Figures 4-7
+pyyaml>=6.0
+jsonschema>=4.19
+# MILP interface — keep exactly what was used in the paper:
+# gurobipy==TODO   or   pulp==TODO / cplex==TODO
